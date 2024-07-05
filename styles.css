@@ -94,6 +94,12 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+.project img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
 .project h2 {
     font-size: 1.5em;
     margin-bottom: 0.5em;
