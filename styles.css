@@ -74,14 +74,14 @@ nav a:hover {
 }
 
 /* Features Section Styles */
-.features {
+.projects {
     padding: 3em 1em;
     text-align: center;
     color: #fff;
     background-color: #192428;
 }
 
-.feature {
+.project {
     margin-bottom: 2em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5em;
@@ -90,16 +90,16 @@ nav a:hover {
     transition: transform 0.3s ease;
 }
 
-.feature:hover {
+.project:hover {
     transform: scale(1.05);
 }
 
-.feature h2 {
+.project h2 {
     font-size: 1.5em;
     margin-bottom: 0.5em;
 }
 
-.feature p {
+.project p {
     font-size: 1em;
 }
 
@@ -124,6 +124,47 @@ nav a:hover {
 .button:hover {
     background-color: #0784b5;
     transform: scale(1.1);
+}
+
+
+/* Contact Section Styles */
+.contact {
+    background-color: #2d383c;
+    color: #fff;
+    padding: 3em 1em;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact label {
+    margin: 0.5em 0;
+    font-size: 1em;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact button {
+    margin-top: 1em;
 }
 
 
