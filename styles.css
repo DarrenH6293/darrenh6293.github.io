@@ -103,9 +103,33 @@ nav a:hover {
     font-size: 1em;
 }
 
+
+/* Button Styles */
+.button-container {
+    margin-top: 1em;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    color: #fff;
+    background-color: #39ace7;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0784b5;
+    transform: scale(1.1);
+}
+
+
 /* Footer Styles */
 footer {
-    background-color: #2d383c;
+    background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 1em 0;
