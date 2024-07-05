@@ -148,11 +148,6 @@ nav a:hover {
     align-items: center;
 }
 
-.contact label {
-    margin: 0.5em 0;
-    font-size: 1em;
-}
-
 .contact input,
 .contact textarea {
     width: 100%;
@@ -163,9 +158,22 @@ nav a:hover {
     font-size: 1em;
 }
 
+.contact .input-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contact .input-group input {
+    flex: 1;
+    margin: 0.5em;
+}
+
 .contact button {
     margin-top: 1em;
 }
+
 
 
 /* Footer Styles */

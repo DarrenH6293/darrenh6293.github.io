@@ -52,16 +52,12 @@
 
     <div class="contact">
         <h2>Contact Me</h2>
-        <form action="mailto:darrenh6293@gmail.com" method="post" enctype="text/plain">
-            <label for="user-email">Your Email:</label>
-            <input type="email" id="user-email" name="user-email" required>
-
-            <label for="subject">Subject:</label>
-            <input type="text" id="subject" name="subject" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <div class="input-group">
+                <input type="email" id="user-email" name="user-email" placeholder="Your Email" required>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
             <button type="submit" class="button">Send Email</button>
         </form>
     </div>
