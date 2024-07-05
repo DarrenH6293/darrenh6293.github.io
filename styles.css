@@ -1,36 +1,63 @@
+/* Reset and Base Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Header Styles */
 header {
-    background-color: #333;
+    background: linear-gradient(to right, #4CAF50, #81C784);
     color: #fff;
-    padding: 1em;
+    padding: 2em;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin-top: 0.5em;
+    font-size: 1.2em;
+}
+
+/* Navigation Styles */
 nav {
     display: flex;
     justify-content: center;
     background-color: #444;
-    padding: 0.5em;
+    padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 1em;
-    padding: 0.5em;
+    padding: 0.5em 1em;
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
     background-color: #555;
+    transform: scale(1.1);
 }
 
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(to right, #2196F3, #64B5F6);
+    color: #fff;
+    text-align: center;
+    padding: 4em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 .hero h1 {
     font-size: 3em;
@@ -43,18 +70,40 @@ nav a:hover {
     margin: 0 auto;
 }
 
+/* Features Section Styles */
 .features {
-    padding: 3em 0;
+    padding: 3em 1em;
     text-align: center;
+    background-color: #fff;
 }
 
 .feature {
     margin-bottom: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: #fafafa;
+    transition: transform 0.3s ease;
 }
 
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.feature p {
+    font-size: 1em;
+}
+
+/* Footer Styles */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1em 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
