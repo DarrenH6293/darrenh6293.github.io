@@ -1,16 +1,19 @@
+/* #39ace7 #0784b5 #414c50 #2d383c #192428 */
+
+
 /* Reset and Base Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #414c50;
+    color: #ffffff;
 }
 
 /* Header Styles */
 header {
-    background: linear-gradient(to right, #4CAF50, #81C784);
+    background: linear-gradient(to right, #000000, #000000);
     color: #fff;
     padding: 2em;
     text-align: center;
@@ -31,7 +34,7 @@ header p {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #444;
+    background-color: #2d383c;
     padding: 1em 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -47,13 +50,13 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #0784b5;
     transform: scale(1.1);
 }
 
 /* About Section Styles */
 .about {
-    background: linear-gradient(to right, #2196F3, #64B5F6);
+    background: linear-gradient(to right, #0784b5, #414c50);
     color: #fff;
     text-align: center;
     padding: 4em 0;
@@ -75,7 +78,8 @@ nav a:hover {
 .features {
     padding: 3em 1em;
     text-align: center;
-    background-color: #fff;
+    color: #fff;
+    background-color: #192428;
 }
 
 .feature {
