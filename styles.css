@@ -34,6 +34,7 @@ nav {
     background-color: #444;
     padding: 1em 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
 }
 
 nav a {
@@ -50,8 +51,8 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* Hero Section Styles */
-.hero {
+/* About Section Styles */
+.about {
     background: linear-gradient(to right, #2196F3, #64B5F6);
     color: #fff;
     text-align: center;
@@ -59,12 +60,12 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.hero h1 {
+.about h1 {
     font-size: 3em;
     margin-bottom: 0.5em;
 }
 
-.hero p {
+.about p {
     font-size: 1.2em;
     max-width: 600px;
     margin: 0 auto;
