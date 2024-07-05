@@ -61,7 +61,6 @@ nav a:hover {
     text-align: center;
     padding: 4em 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: gradientAnimation 15s ease infinite;
 }
 
 @keyframes gradientAnimation {
@@ -149,7 +148,8 @@ nav a:hover {
 }
 
 .button:hover {
-    background-color: #0784b5;
+    background-color: linear-gradient(270deg, #0784b5, #414c50);
+    animation: gradientAnimation 15s ease infinite;
     transform: scale(1.1);
 }
 
