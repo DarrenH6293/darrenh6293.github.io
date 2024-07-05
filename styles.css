@@ -91,12 +91,13 @@ nav a:hover {
     padding: 1.5em;
     border-radius: 10px;
     background-color: #2d383c;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, outline 0.3s ease;
+    position: relative;
 }
 
 .project:hover {
     transform: scale(1.05);
-    border: 2px solid #0784b5;
+    outline: 2px solid #0784b5;
 }
 
 .project img {
