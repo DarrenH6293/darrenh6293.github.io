@@ -196,14 +196,14 @@ nav a:hover {
   justify-content: space-between;
 }
 
-.contact .input-group .input-icon {
+.contact .input-group .icon {
   display: flex;
   align-items: center;
   flex: 1;
   margin: 0.5em;
 }
 
-.contact .input-group .input-icon svg {
+.contact .input-group .icon svg {
   margin-right: 0.5em;
   fill: #39ace7;
 }
@@ -214,6 +214,12 @@ nav a:hover {
 
 .contact button {
   margin-top: 1em;
+}
+
+.contact .icon {
+  align-items: center;
+  flex: 1;
+  fill: #39ace7;
 }
 
 
