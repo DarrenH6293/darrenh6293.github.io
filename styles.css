@@ -74,6 +74,66 @@ nav a:hover {
   margin: 0 auto;
 }
 
+.technologies {
+  background: linear-gradient(270deg, #39ace7, #414c50);
+  background-size: 400% 400%;
+  color: #fff;
+  padding: 2em 0;
+  margin-top: 2em;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.technologies h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.tech-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-icon img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+}
+
+.tech-icon p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframes for Background Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 /* Project Section Styles */
 .projects {
@@ -216,9 +276,17 @@ nav a:hover {
   margin-top: 1em;
 }
 
-.contact .icon {
+.contact .icon-group {
+  margin-top: 1em;
+  margin-bottom: -1em;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  flex: 1;
+  justify-content: center;
+  gap: 2em;
+}
+
+.contact .icon {
   fill: #39ace7;
 }
 
