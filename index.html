@@ -1,115 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darren Hong's Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Darren Hong</h1>
-        <p></p>
-    </header>
-
-    <nav>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Darren Hong's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="main-nav">
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <a href="Resume.pdf" download class="resume-btn">
+            <i class="fas fa-download"></i> Resume
+          </a>
+          <div class="nav-social">
+            <a
+              href="https://github.com/DarrenH6293"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/darren-hong/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </nav>
 
-    <div class="about">
-        <h1>About</h1>
-        <p>Placeholder Text.</p>
+    <section id="about" class="about">
+      <h1>About Me</h1>
+      <p>
+        I'm Darren Hong, a recent Computer Science graduate from Cal Poly San
+        Luis Obispo with a passion for building efficient, user-friendly
+        applications. I enjoy solving complex problems and continuously
+        expanding my technical skillset.
+      </p>
 
-        <div class="technologies">
-            <h2>Technologies & Programming Languages</h2>
-            <div class="tech-icons">
-                <div class="tech-icon">
-                    <img src="images/html.png" alt="HTML5">
-                    <p>HTML5</p>
-                </div>
-                <div class="tech-icon">
-                    <img src="images/css.png" alt="CSS3">
-                    <p>CSS3</p>
-                </div>
-                <div class="tech-icon">
-                    <img src="images/js.png" alt="JavaScript">
-                    <p>JavaScript</p>
-                </div>
-                <div class="tech-icon">
-                    <img src="images/python.png" alt="Python">
-                    <p>Python</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-   <div class="projects">
-        <div class="project">
-            <img src="images/placeholder.jpg" alt="Project 1 Thumbnail">
-            <h2>Project 1</h2>
-            <p>Description of Project 1.</p>
-            <div class="button-container">
-                <a href="https://github.com" class="button">Source</a>
-                <a href="https://google.com" class="button">Demo</a>
-            </div>
-        </div>
-        <div class="project">
-            <img src="images/placeholder.jpg" alt="Project 2 Thumbnail">
-            <h2>Project 2</h2>
-            <p>Description of Project 2.</p>
-            <div class="button-container">
-                <a href="https://github.com" class="button">Source</a>
-                <a href="https://google.com" class="button">Demo</a>
-            </div>
-        </div>
-        <div class="project">
-            <img src="images/placeholder.jpg" alt="Project 3 Thumbnail">
-            <h2>Project 3</h2>
-            <p>Description of Project 3.</p>
-            <div class="button-container">
-                <a href="https://github.com" class="button">Source</a>
-                <a href="https://google.com" class="button">Demo</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="contact">
-        <h2>Contact Me</h2>
-        <form action="mailto:darrenh6293@gmail.com" method="post" enctype="text/plain">
-            <div class="input-group">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 12.713l11.985-8.713H.015zM22 4v16H2V4l10 7.147L22 4z"/></svg>
-                    <input type="email" id="user-email" name="user-email" placeholder="Your Email" required>
-                </div>
-                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-            </div>
-            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="button">Send Email</button>
-        </form>
-        <div class="icon-group">
-        <div class="icon">
-          <a href="https://www.linkedin.com" aria-label="LinkedIn" class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.256c-.966 0-1.75-.78-1.75-1.744 0-.964.784-1.744 1.75-1.744s1.75.78 1.75 1.744c0 .964-.784 1.744-1.75 1.744zm13.5 11.256h-3v-5.339c0-1.271-.024-2.907-1.769-2.907-1.769 0-2.039 1.38-2.039 2.808v5.438h-3v-10h2.881v1.354h.041c.401-.759 1.379-1.558 2.841-1.558 3.039 0 3.6 2 3.6 4.597v5.607z" />
-            </svg>
-          </a>
+      <div class="technologies">
+        <h2>Technologies & Skills</h2>
+        <div class="tech-carousel-container">
+          <div class="tech-carousel" id="techCarousel">
+            <!-- Tech icons inserted here -->
           </div>
-          <div class="icon">
-          <a href="https://github.com" aria-label="GitHub" class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-              <path
-                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.087-.744.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.775.418-1.305.76-1.605-2.665-.305-5.466-1.335-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.524.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.21 0 1.595-.015 2.88-.015 3.285 0 .315.21.694.825.577 4.765-1.585 8.2-6.084 8.2-11.385 0-6.627-5.373-12-12-12z" />
-            </svg>
-          </a>
         </div>
+        <button class="view-all-btn" id="viewAllTech">
+          <i class="fas fa-th-large"></i> View All Technologies
+        </button>
+      </div>
+    </section>
+
+    <div class="tech-modal" id="techModal">
+      <div class="tech-modal-content">
+        <div class="tech-modal-header">
+          <h3>All Technologies & Skills</h3>
+          <button class="close-modal" id="closeModal">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
+        <div class="tech-grid" id="techGrid">
+          <!-- Tech icons inserted here -->
+        </div>
+      </div>
     </div>
 
-    <footer>
-        <p>&copy; Darren Hong. All rights reserved.</p>
-    </footer>
-</body>
+    <section id="projects" class="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-container">
+        <div class="project">
+          <div class="project-image">
+            <img src="images/project1.jpg" alt="Eventory" />
+          </div>
+          <div class="project-content">
+            <h3>Event Tracker Web App</h3>
+            <p>Placeholder Description</p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Next.js</span>
+            </div>
+            <div class="button-container">
+              <a href="https://www.eventory.site/" class="button"
+                ><i class="fas fa-external-link-alt"></i> Live Website</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-image">
+            <img
+              src="images/project2.jpg"
+              alt="E-commerce Prototype Platform"
+            />
+          </div>
+          <div class="project-content">
+            <h3>E-commerce Platform</h3>
+            <p>Placeholder Description</p>
+            <div class="project-tech">
+              <span>Next.js</span>
+              <span>Prisma</span>
+              <span>Docker</span>
+            </div>
+            <div class="button-container">
+              <a href="https://github.com" class="button"
+                ><i class="fab fa-github"></i> Source</a
+              >
+              <a href="https://github.com" class="button"
+                ><i class="fas fa-external-link-alt"></i>Screenshots</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-image">
+            <img src="images/project3.jpg" alt="YouTube Web Extension" />
+          </div>
+          <div class="project-content">
+            <h3>YouTube Web Extension (Research)</h3>
+            <p>Placeholder Description</p>
+            <div class="project-tech">
+              <span>JavaScript</span>
+            </div>
+            <div class="button-container">
+              <a href="https://github.com" class="button"
+                ><i class="fab fa-github"></i> Source</a
+              >
+              <a href="https://github.com" class="button"
+                ><i class="fas fa-external-link-alt"></i> Screenshots</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="resume">
+      <h2 class="section-title">Resume</h2>
+      <div class="resume-content">
+        <p>View my experience, education, and accomplishments in my resume.</p>
+        <a href="Resume.pdf" download class="button download-button">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact Me</h2>
+      <p>Interested in working together? Feel free to reach out!</p>
+
+      <form
+        action="mailto:darrenh6293@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <div class="input-group">
+          <div class="form-control">
+            <label for="user-name">Name</label>
+            <input
+              type="text"
+              id="user-name"
+              name="user-name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label for="user-email">Email</label>
+            <input
+              type="email"
+              id="user-email"
+              name="user-email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject"
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="button">Send Message</button>
+      </form>
+
+      <div class="social-links">
+        <a
+          href="https://github.com/DarrenH6293"
+          aria-label="GitHub"
+          class="social-icon"
+          target="_blank"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/darren-hong/"
+          aria-label="LinkedIn"
+          class="social-icon"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </section>
+
+    <script>
+      const techIcons = [
+        { name: "Python", image: "images/python.png" },
+        { name: "Java", image: "images/java.webp" },
+        { name: "JavaScript", image: "images/js.png" },
+        { name: "TypeScript", image: "images/typescript.png" },
+        { name: "HTML", image: "images/html.png" },
+        { name: "CSS", image: "images/css.png" },
+        { name: "C", image: "images/c.png" },
+        { name: "PostgreSQL", image: "images/postgresql.png" },
+        { name: "MySQL", image: "images/mysql.png" },
+        { name: "DuckDB", image: "images/duckdb.png" },
+        { name: "AWS", image: "images/aws.png" },
+        { name: "Cloudflare", image: "images/cloudflare.png" },
+        { name: "Git", image: "images/git.png" },
+        { name: "Docker", image: "images/docker.webp" },
+        { name: "React", image: "images/react.png" },
+        { name: "Next.js", image: "images/nextjs.png" },
+        { name: "Prisma", image: "images/prisma.png" },
+        { name: "Jest", image: "images/jest.png" },
+        { name: "Terraform", image: "images/terraform.png" },
+        { name: "Vercel", image: "images/vercel.svg" },
+      ];
+
+      function createTechCarouselItems() {
+        const carousel = document.getElementById("techCarousel");
+        let carouselHTML = "";
+
+        techIcons.forEach((tech) => {
+          carouselHTML += `
+            <div class="tech-icon">
+              <img src="${tech.image}" alt="${tech.name}" />
+              <p>${tech.name}</p>
+            </div>
+          `;
+        });
+
+        carouselHTML += carouselHTML;
+
+        carousel.innerHTML = carouselHTML;
+      }
+
+      function createTechGridItems() {
+        const grid = document.getElementById("techGrid");
+        let gridHTML = "";
+
+        techIcons.forEach((tech) => {
+          gridHTML += `
+            <div class="tech-grid-item">
+              <img src="${tech.image}" alt="${tech.name}" />
+              <p>${tech.name}</p>
+            </div>
+          `;
+        });
+
+        grid.innerHTML = gridHTML;
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        createTechCarouselItems();
+        createTechGridItems();
+
+        document.querySelectorAll("#main-nav a").forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: "smooth",
+            });
+          });
+        });
+
+        window.addEventListener("scroll", () => {
+          const sections = document.querySelectorAll("section");
+          const navLinks = document.querySelectorAll("#main-nav a");
+
+          let current = "";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (pageYOffset >= sectionTop - 200) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === current) {
+              link.classList.add("active");
+            }
+          });
+        });
+
+        const modal = document.getElementById("techModal");
+        const viewAllBtn = document.getElementById("viewAllTech");
+        const closeModal = document.getElementById("closeModal");
+
+        viewAllBtn.addEventListener("click", function () {
+          modal.classList.add("show");
+          document.body.style.overflow = "hidden";
+        });
+
+        closeModal.addEventListener("click", function () {
+          modal.classList.remove("show");
+          document.body.style.overflow = "auto";
+        });
+
+        window.addEventListener("click", function (event) {
+          if (event.target === modal) {
+            modal.classList.remove("show");
+            document.body.style.overflow = "auto";
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && modal.classList.contains("show")) {
+            modal.classList.remove("show");
+            document.body.style.overflow = "auto";
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
