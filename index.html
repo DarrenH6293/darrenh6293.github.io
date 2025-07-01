@@ -97,7 +97,36 @@
               <span>React</span>
               <span>TypeScript</span>
               <span>Next.js</span>
+              <span>AWS</span>
             </div>
+            <div class="project-details">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>
+                  User authentication and personalized event recommendations
+                </li>
+                <li>Filter events by categories and tags</li>
+                <li>Follow favorite threads and set reminders</li>
+              </ul>
+              <h4>Technical Highlights:</h4>
+              <ul>
+                <li>
+                  Built with Next.js for server-side rendering and optimal
+                  performance
+                </li>
+                <li>
+                  TypeScript implementation for type safety and code quality
+                </li>
+              </ul>
+            </div>
+            <button class="details-toggle">
+              <span class="show-text"
+                ><i class="fas fa-plus-circle"></i> More Details</span
+              >
+              <span class="hide-text"
+                ><i class="fas fa-minus-circle"></i> Less Details</span
+              >
+            </button>
             <div class="button-container">
               <a href="https://www.eventory.site/" class="button"
                 ><i class="fas fa-external-link-alt"></i> Live Website</a
@@ -121,6 +150,26 @@
               <span>Prisma</span>
               <span>Docker</span>
             </div>
+            <div class="project-details">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Placeholder</li>
+                <li>Placeholder</li>
+              </ul>
+              <h4>Technical Highlights:</h4>
+              <ul>
+                <li>Placeholder</li>
+                <li>Placeholder</li>
+              </ul>
+            </div>
+            <button class="details-toggle">
+              <span class="show-text"
+                ><i class="fas fa-plus-circle"></i> More Details</span
+              >
+              <span class="hide-text"
+                ><i class="fas fa-minus-circle"></i> Less Details</span
+              >
+            </button>
             <div class="button-container">
               <a href="https://github.com" class="button"
                 ><i class="fab fa-github"></i> Source</a
@@ -137,13 +186,105 @@
             <img src="images/project3.jpg" alt="YouTube Web Extension" />
           </div>
           <div class="project-content">
-            <h3>YouTube Web Extension (Research)</h3>
-            <p>Placeholder Description</p>
+            <h3>Browser Web Extension (Research)</h3>
+            <p>
+              A browser extension for YouTube that allowed users to manually
+              trigger mid-roll ads and mimicked YouTube’s native player styling.
+              It was used to do a research report situating findings within
+              existing literature on user autonomy, highlighting how
+              user-controlled ad timing can enhance viewer satisfaction while
+              maintaining platform monetization strategies.
+            </p>
             <div class="project-tech">
-              <span>JavaScript</span>
+              <span>TypeScript</span>
+              <span>CSS</span>
             </div>
+            <div class="project-details">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Manual advertisement triggering</li>
+                <li>Floating pop-up prompts for usage information</li>
+                <li>Native UI styling matching YouTube's design</li>
+              </ul>
+              <h4>Technical Highlights:</h4>
+              <ul>
+                <li>TypeScript browser extension architecture</li>
+                <li>
+                  Dynamic injection logic by monitoring video playback state
+                </li>
+                <li>
+                  Configurable extension options stored using Chrome extension
+                  API
+                </li>
+                <li>
+                  Custom video player overlay that interrupts native playback
+                </li>
+              </ul>
+            </div>
+            <button class="details-toggle">
+              <span class="show-text"
+                ><i class="fas fa-plus-circle"></i> More Details</span
+              >
+              <span class="hide-text"
+                ><i class="fas fa-minus-circle"></i> Less Details</span
+              >
+            </button>
             <div class="button-container">
               <a href="https://github.com" class="button"
+                ><i class="fab fa-github"></i> Source</a
+              >
+              <a href="https://github.com" class="button"
+                ><i class="fas fa-external-link-alt"></i> Screenshots</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-image">
+            <img src="images/project4.jpg" alt="Color Identifier" />
+          </div>
+          <div class="project-content">
+            <h3>Color Identifier</h3>
+            <p>
+              A simple desktop GUI app that allows users to upload an image and
+              click anywhere to inspect the color at that pixel. Useful for
+              people with colorblindness or those who need to identify specific
+              colors in images.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+            </div>
+            <div class="project-details">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>Image upload and display with various formats</li>
+                <li>Precise pixel selection with magnified view</li>
+                <li>
+                  Color information in multiple formats (RGB, HEX, HSL, etc.)
+                </li>
+                <li>Color name approximation</li>
+              </ul>
+              <h4>Technical Highlights:</h4>
+              <ul>
+                <li>Python with Tkinter for the desktop interface</li>
+                <li>PIL/Pillow for image processing</li>
+                <li>Modular and maintainable design</li>
+                <li>Optimized for accessibility with interactive mods</li>
+              </ul>
+            </div>
+            <button class="details-toggle">
+              <span class="show-text"
+                ><i class="fas fa-plus-circle"></i> More Details</span
+              >
+              <span class="hide-text"
+                ><i class="fas fa-minus-circle"></i> Less Details</span
+              >
+            </button>
+            <div class="button-container">
+              <a
+                href="https://github.com/DarrenH6293/Color-Identifier"
+                class="button"
                 ><i class="fab fa-github"></i> Source</a
               >
               <a href="https://github.com" class="button"
@@ -301,17 +442,19 @@
         createTechCarouselItems();
         createTechGridItems();
 
-        document.querySelectorAll("#main-nav a").forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href");
-            const targetElement = document.querySelector(targetId);
-            window.scrollTo({
-              top: targetElement.offsetTop,
-              behavior: "smooth",
+        document
+          .querySelectorAll("#main-nav .nav-links a")
+          .forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+              e.preventDefault();
+              const targetId = this.getAttribute("href");
+              const targetElement = document.querySelector(targetId);
+              window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth",
+              });
             });
           });
-        });
 
         window.addEventListener("scroll", () => {
           const sections = document.querySelectorAll("section");
@@ -362,6 +505,23 @@
             modal.classList.remove("show");
             document.body.style.overflow = "auto";
           }
+        });
+
+        document.querySelectorAll(".details-toggle").forEach((button) => {
+          button.addEventListener("click", function () {
+            const projectContent = this.closest(".project-content");
+            const detailsSection =
+              projectContent.querySelector(".project-details");
+
+            projectContent.classList.toggle("expanded");
+
+            if (projectContent.classList.contains("expanded")) {
+              detailsSection.style.maxHeight =
+                detailsSection.scrollHeight + "px";
+            } else {
+              detailsSection.style.maxHeight = "0px";
+            }
+          });
         });
       });
     </script>

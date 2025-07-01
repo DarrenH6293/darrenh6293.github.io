@@ -535,30 +535,68 @@ nav a::after {
 .button-container {
   display: flex;
   gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-.button {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: var(--primary-blue);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 500;
-  transition: background-color var(--transition-speed),
-    transform var(--transition-speed);
+.project-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin: 0.5rem 0;
+}
+
+.project-content.expanded .project-details {
+  border-top: 1px solid var(--tertiary-dark);
+  margin-top: 1.5rem;
+}
+
+.project-details h4 {
+  color: var(--accent-blue);
+  margin: 1.2rem 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.project-details ul {
+  margin: 0.5rem 0 1.5rem 1.5rem;
+  color: var(--text-secondary);
+}
+
+.project-details li {
+  margin-bottom: 0.5rem;
+}
+
+.details-toggle {
+  background: none;
   border: none;
+  color: var(--primary-blue);
   cursor: pointer;
-  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  transition: color var(--transition-speed);
+  align-self: flex-start;
 }
 
-.button i {
-  margin-right: 5px;
+.details-toggle:hover {
+  color: var(--accent-blue);
 }
 
-.button:hover {
-  background-color: var(--secondary-blue);
-  transform: translateY(-2px);
+.details-toggle i {
+  margin-right: 0.5rem;
+}
+
+.hide-text {
+  display: none;
+}
+
+.project-content.expanded .show-text {
+  display: none;
+}
+
+.project-content.expanded .hide-text {
+  display: inline;
 }
 
 /* Resume Section Styles */
@@ -682,6 +720,31 @@ nav a::after {
   transform: translateY(-5px);
 }
 
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--primary-blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button i {
+  margin-right: 5px;
+}
+
+.button:hover {
+  background-color: var(--secondary-blue);
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
 @media (max-width: 992px) {
   .project {
     flex-direction: column;
