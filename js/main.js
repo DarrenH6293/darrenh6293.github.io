@@ -193,28 +193,32 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (media.type === "video") {
                     slide.innerHTML = `
                         <div class="video-container">
-                            <video controls preload="auto" playsinline>
+                            <video controls autoplay muted playsinline id="modalVideo">
                                 <source src="${item}" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <div class="video-loading">Loading video...</div>
                         </div>
                     `;
 
+
                     const video = slide.querySelector('video');
 
-                    video.addEventListener('loadeddata', function () {
-                        console.log("Video loaded successfully");
-                        slide.querySelector('.video-loading').style.display = 'none';
+                    video.addEventListener('loadedmetadata', function () {
+                        console.log("Video dimensions:", video.videoWidth, "x", video.videoHeight);
+
+
+                        video.style.display = 'block';
+                        video.style.zIndex = '100';
+                        video.style.position = 'relative';
+
+
+                        video.play().catch(e => console.log("Auto-play prevented:", e));
                     });
 
+
                     video.addEventListener('error', function (e) {
-                        console.error("Error loading video:", e);
-                        slide.innerHTML = `
-                            <div class="video-error">
-                                <p>Error loading video. Please try again or <a href="${item}" download>download</a> to view.</p>
-                            </div>
-                        `;
+                        console.error("Video error:", e);
+                        console.error("Error code:", video.error ? video.error.code : "unknown");
                     });
                 } else {
                     slide.innerHTML = `<img src="${item}" alt="${media.title} screenshot ${index + 1}">`;
@@ -244,18 +248,23 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.style.overflow = "hidden";
 
             setTimeout(() => {
-                const activeSlide = mediaSlides.querySelector('.media-slide.active');
-                if (activeSlide) {
-                    const video = activeSlide.querySelector('video');
-                    if (video) {
-                        video.style.display = 'none';
-                        setTimeout(() => {
-                            video.style.display = 'block';
-                            video.play().catch(e => console.log("Auto-play prevented:", e));
-                        }, 50);
-                    }
+                const videoElement = document.getElementById('modalVideo');
+                if (videoElement) {
+
+                    videoElement.style.display = 'block';
+                    videoElement.style.visibility = 'visible';
+                    videoElement.style.opacity = '1';
+
+
+                    console.log("Video element found:", videoElement);
+                    console.log("Video source:", videoElement.querySelector('source').src);
+                    console.log("Video ready state:", videoElement.readyState);
+
+
+                    videoElement.load();
+                    videoElement.play().catch(e => console.log("Couldn't autoplay:", e));
                 }
-            }, 300);
+            }, 500);
         });
     });
 
