@@ -157,14 +157,6 @@ document.addEventListener("DOMContentLoaded", function () {
             type: "video",
             items: ["videos/extension-demo.mp4"],
         },
-        project3: {
-            title: "Browser Web Extension",
-            type: "screenshots",
-            items: [
-                "images/projects/extension/screenshot1.jpg",
-                "images/projects/extension/screenshot2.jpg",
-            ],
-        },
         project4: {
             title: "Color Identifier",
             type: "video",
@@ -314,6 +306,65 @@ document.addEventListener("DOMContentLoaded", function () {
             prevButton.click();
         } else if (event.key === "ArrowRight") {
             nextButton.click();
+        }
+    });
+
+    // Research Paper Modal functionality
+    const paperModal = document.getElementById("paperModal");
+    const closePaperModal = document.getElementById("closePaperModal");
+    const paperPreview = document.getElementById("paperPreview");
+    const downloadPaper = document.getElementById("downloadPaper");
+    const paperModalTitle = document.getElementById("paperModalTitle");
+
+    // Add click event to research paper buttons
+    document.querySelectorAll(".paper-button").forEach((button) => {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const paperPath = this.getAttribute("data-paper");
+            const paperTitle = this.textContent.trim();
+
+            if (!paperPath) return;
+
+            // Set modal title
+            paperModalTitle.textContent = paperTitle;
+
+            // Update paper preview
+            paperPreview.innerHTML = `
+                <iframe src="${paperPath}"></iframe>
+            `;
+
+            // Update download link
+            downloadPaper.href = paperPath;
+            downloadPaper.setAttribute("download", paperPath.split('/').pop());
+
+            // Show modal
+            paperModal.classList.add("show");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    // Close modal
+    closePaperModal.addEventListener("click", function () {
+        paperModal.classList.remove("show");
+        document.body.style.overflow = "auto";
+    });
+
+    // Close modal when clicking outside
+    paperModal.addEventListener("click", function (event) {
+        if (event.target === paperModal) {
+            paperModal.classList.remove("show");
+            document.body.style.overflow = "auto";
+        }
+    });
+
+    // Keyboard navigation (Escape to close)
+    document.addEventListener("keydown", function (event) {
+        if (!paperModal.classList.contains("show")) return;
+
+        if (event.key === "Escape") {
+            paperModal.classList.remove("show");
+            document.body.style.overflow = "auto";
         }
     });
 });
