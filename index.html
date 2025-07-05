@@ -64,7 +64,7 @@
           </div>
         </div>
         <button class="view-all-btn" id="viewAllTech">
-          <i class="fas fa-th-large"></i> View All Technologies
+          <i class="fas fa-th-large"></i> View All
         </button>
       </div>
     </section>
@@ -88,35 +88,53 @@
       <div class="projects-container">
         <div class="project">
           <div class="project-image">
-            <img src="images/project1.jpg" alt="Eventory" />
+            <img src="images/eventory-logo.svg" alt="Eventory" />
           </div>
           <div class="project-content">
             <h3>Event Tracker Web App</h3>
-            <p>Placeholder Description</p>
+            <p>
+              A web application designed to help people stay on track of
+              time-limited events across multiple places. The platform offers an
+              interface to browse, follow, and post events, ensuring people
+              never miss critical moments.
+            </p>
             <div class="project-tech">
               <span>React</span>
               <span>TypeScript</span>
               <span>Next.js</span>
               <span>AWS</span>
+              <span>Prisma</span>
+              <span>PostgreSQL</span>
+              <span>Cloudflare</span>
+              <span>Vercel</span>
             </div>
             <div class="project-details">
               <h4>Key Features:</h4>
               <ul>
-                <li>
-                  User authentication and personalized event recommendations
-                </li>
+                <li>No need to manually add reminders yourself</li>
+                <li>Personalized event recommendations</li>
                 <li>Filter events by categories and tags</li>
                 <li>Follow favorite threads and set reminders</li>
+                <li>Create own private thread to remind your own group</li>
               </ul>
               <h4>Technical Highlights:</h4>
               <ul>
-                <li>
-                  Built with Next.js for server-side rendering and optimal
-                  performance
-                </li>
+                <li>Built with Next.js for server-side rendering</li>
                 <li>
                   TypeScript implementation for type safety and code quality
                 </li>
+                <li>Uses AWS Lambda for scalable API endpoints</li>
+                <li>
+                  Amazon RDS for reliable relational database and persistent
+                  data
+                </li>
+                <li>Prisma ORM for type-safe database access and migrations</li>
+                <li>
+                  Cloudflare handles DNS resolution, enforces HTTPS, and
+                  provides DDoS protection and rate limiting
+                </li>
+                <li>User authentication using Google OAuth</li>
+                <li>Vercel deploys and hosts the Next.js frontend</li>
               </ul>
             </div>
             <button class="details-toggle">
@@ -143,8 +161,12 @@
             />
           </div>
           <div class="project-content">
-            <h3>E-commerce Platform</h3>
-            <p>Placeholder Description</p>
+            <h3>E-commerce Platform (Dev Environment)</h3>
+            <p>
+              A developer environment for a web application intially made for
+              connecting homeowners with home-service professionals. It can be
+              easily modified to serve other types of service-based businesses.
+            </p>
             <div class="project-tech">
               <span>Next.js</span>
               <span>Prisma</span>
@@ -153,13 +175,37 @@
             <div class="project-details">
               <h4>Key Features:</h4>
               <ul>
-                <li>Placeholder</li>
-                <li>Placeholder</li>
+                <li>
+                  Seamless local development environment matching production
+                  setup
+                </li>
+                <li>
+                  Containerized architecture for easy onboarding and
+                  reproducibility
+                </li>
+                <li>
+                  Integrated database access with Prisma ORM for type-safe
+                  queries
+                </li>
+                <li>
+                  Support for rapid iteration and testing of application
+                  features
+                </li>
               </ul>
               <h4>Technical Highlights:</h4>
               <ul>
-                <li>Placeholder</li>
-                <li>Placeholder</li>
+                <li>
+                  Docker-based containerization of the full application stack
+                </li>
+                <li>
+                  PostgreSQL database setup with Prisma migrations and schema
+                  management
+                </li>
+                <li>Docker Compose configuration for orchestrating services</li>
+                <li>
+                  Environment parity testing to validate deployments before
+                  production
+                </li>
               </ul>
             </div>
             <button class="details-toggle">
@@ -171,12 +217,14 @@
               >
             </button>
             <div class="button-container">
-              <a href="https://github.com" class="button"
+              <a
+                href="https://github.com/DarrenH6293/E-Commerce-Website-Prototype"
+                class="button"
                 ><i class="fab fa-github"></i> Source</a
               >
-              <a href="https://github.com" class="button"
-                ><i class="fas fa-external-link-alt"></i>Screenshots</a
-              >
+              <a href="#" class="button media-button" data-project="project2">
+                <i class="fas fa-play-circle"></i> Demo
+              </a>
             </div>
           </div>
         </div>
@@ -233,9 +281,9 @@
               <a href="https://github.com" class="button"
                 ><i class="fab fa-github"></i> Source</a
               >
-              <a href="https://github.com" class="button"
-                ><i class="fas fa-external-link-alt"></i> Screenshots</a
-              >
+              <a href="#" class="button media-button" data-project="project3">
+                <i class="fas fas fa-images"></i> Screenshots
+              </a>
             </div>
           </div>
         </div>
@@ -287,10 +335,67 @@
                 class="button"
                 ><i class="fab fa-github"></i> Source</a
               >
-              <a href="https://github.com" class="button"
-                ><i class="fas fa-external-link-alt"></i> Screenshots</a
-              >
+              <a href="#" class="button media-button" data-project="project4">
+                <i class="fas fa-play-circle"></i> Demo
+              </a>
             </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-image">
+            <img src="images/project5.jpg" alt="Community Discord Bot" />
+          </div>
+          <div class="project-content">
+            <h3>Discord Bot</h3>
+            <p>
+              A discord bot made for a game company's official community server
+              with over 15,000 members. It has features helpful for players such
+              as keeping track of time zones, automatic publishing of news, and
+              retrieving information about the game.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Discord API</span>
+            </div>
+            <div class="project-details">
+              <h4>Key Features:</h4>
+              <ul>
+                <li>
+                  Automatic publishing of official game news to announcement
+                  channels
+                </li>
+                <li>
+                  Time zone conversion commands to help display events globally
+                </li>
+                <li>Game data lookups with rich embed responses</li>
+                <li>
+                  Custom commands for moderators to manage the server
+                  efficiently
+                </li>
+              </ul>
+              <h4>Technical Highlights:</h4>
+              <ul>
+                <li>Asynchronous command handling with discord.py</li>
+                <li>
+                  Cog-based modular architecture for easy maintenance and
+                  feature updates
+                </li>
+                <li>Uses web scraping to fetch up-to-date game information</li>
+                <li>
+                  Deployed on an Oracle Cloud instance with process monitoring
+                  for high availability
+                </li>
+              </ul>
+            </div>
+            <button class="details-toggle">
+              <span class="show-text"
+                ><i class="fas fa-plus-circle"></i> More Details</span
+              >
+              <span class="hide-text"
+                ><i class="fas fa-minus-circle"></i> Less Details</span
+              >
+            </button>
           </div>
         </div>
       </div>
@@ -380,150 +485,37 @@
       </div>
     </section>
 
-    <script>
-      const techIcons = [
-        { name: "Python", image: "images/python.png" },
-        { name: "Java", image: "images/java.svg" },
-        { name: "JavaScript", image: "images/js.png" },
-        { name: "TypeScript", image: "images/typescript.png" },
-        { name: "HTML", image: "images/html.png" },
-        { name: "CSS", image: "images/css.png" },
-        { name: "C", image: "images/c.png" },
-        { name: "PostgreSQL", image: "images/postgresql.png" },
-        { name: "MySQL", image: "images/mysql.png" },
-        { name: "DuckDB", image: "images/duckdb.png" },
-        { name: "AWS", image: "images/aws.png" },
-        { name: "Cloudflare", image: "images/cloudflare.png" },
-        { name: "Git", image: "images/git.png" },
-        { name: "Docker", image: "images/docker.webp" },
-        { name: "React", image: "images/react.png" },
-        { name: "Next.js", image: "images/nextjs.png" },
-        { name: "Prisma", image: "images/prisma.png" },
-        { name: "Jest", image: "images/jest.png" },
-        { name: "Terraform", image: "images/terraform.png" },
-        { name: "Vercel", image: "images/vercel.svg" },
-      ];
-
-      function createTechCarouselItems() {
-        const carousel = document.getElementById("techCarousel");
-        let carouselHTML = "";
-
-        techIcons.forEach((tech) => {
-          carouselHTML += `
-            <div class="tech-icon">
-              <img src="${tech.image}" alt="${tech.name}" />
-              <p>${tech.name}</p>
+    <!-- Project Media Modal -->
+    <div class="project-media-modal" id="projectMediaModal">
+      <div class="project-media-content">
+        <div class="modal-header">
+          <h3 id="mediaModalTitle">Project Media</h3>
+          <button class="close-modal" id="closeMediaModal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Media carousel inserted here -->
+          <div class="media-container" id="mediaContainer">
+            <div class="media-carousel">
+              <button class="carousel-control prev" id="prevMedia">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="media-slides" id="mediaSlides">
+                <!-- Slides inserted here -->
+              </div>
+              <button class="carousel-control next" id="nextMedia">
+                <i class="fas fa-chevron-right"></i>
+              </button>
             </div>
-          `;
-        });
-
-        carouselHTML += carouselHTML;
-
-        carousel.innerHTML = carouselHTML;
-      }
-
-      function createTechGridItems() {
-        const grid = document.getElementById("techGrid");
-        let gridHTML = "";
-
-        techIcons.forEach((tech) => {
-          gridHTML += `
-            <div class="tech-grid-item">
-              <img src="${tech.image}" alt="${tech.name}" />
-              <p>${tech.name}</p>
+            <div class="carousel-indicators" id="mediaIndicators">
+              <!-- Indicators inserted here  -->
             </div>
-          `;
-        });
+          </div>
+        </div>
+      </div>
+    </div>
 
-        grid.innerHTML = gridHTML;
-      }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        createTechCarouselItems();
-        createTechGridItems();
-
-        document
-          .querySelectorAll("#main-nav .nav-links a")
-          .forEach((anchor) => {
-            anchor.addEventListener("click", function (e) {
-              e.preventDefault();
-              const targetId = this.getAttribute("href");
-              const targetElement = document.querySelector(targetId);
-              window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: "smooth",
-              });
-            });
-          });
-
-        window.addEventListener("scroll", () => {
-          const sections = document.querySelectorAll("section");
-          const navLinks = document.querySelectorAll("#main-nav a");
-
-          let current = "";
-
-          sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-
-            if (pageYOffset >= sectionTop - 200) {
-              current = section.getAttribute("id");
-            }
-          });
-
-          navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href").substring(1) === current) {
-              link.classList.add("active");
-            }
-          });
-        });
-
-        const modal = document.getElementById("techModal");
-        const viewAllBtn = document.getElementById("viewAllTech");
-        const closeModal = document.getElementById("closeModal");
-
-        viewAllBtn.addEventListener("click", function () {
-          modal.classList.add("show");
-          document.body.style.overflow = "hidden";
-        });
-
-        closeModal.addEventListener("click", function () {
-          modal.classList.remove("show");
-          document.body.style.overflow = "auto";
-        });
-
-        window.addEventListener("click", function (event) {
-          if (event.target === modal) {
-            modal.classList.remove("show");
-            document.body.style.overflow = "auto";
-          }
-        });
-
-        document.addEventListener("keydown", function (event) {
-          if (event.key === "Escape" && modal.classList.contains("show")) {
-            modal.classList.remove("show");
-            document.body.style.overflow = "auto";
-          }
-        });
-
-        document.querySelectorAll(".details-toggle").forEach((button) => {
-          button.addEventListener("click", function () {
-            const projectContent = this.closest(".project-content");
-            const detailsSection =
-              projectContent.querySelector(".project-details");
-
-            projectContent.classList.toggle("expanded");
-
-            if (projectContent.classList.contains("expanded")) {
-              detailsSection.style.maxHeight =
-                detailsSection.scrollHeight + "px";
-            } else {
-              detailsSection.style.maxHeight = "0px";
-            }
-          });
-        });
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>

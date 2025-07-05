@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<svg width="713" height="198" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" version="1.2">
+ <g class="layer">
+  <title>Layer 1</title>
+  <g id="svg_26" transform="translate(48.9796, 10.8844) matrix(1, 0, 0, 1, -1.77515, -9.07298)">
+   <rect fill="#ffffff" height="28" id="svg_15" rx="12" ry="12" stroke="null" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-opacity="null" stroke-width="null" width="178.62" x="8.96" y="37.01"/>
+   <rect fill="#ffffff" height="28" id="svg_16" rx="12" ry="12" stroke="null" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-opacity="null" stroke-width="null" width="179.41" x="8.19" y="153.96"/>
+   <path d="m60.76,30.03c12.35,15.89 20.21,17.3 5.64,9.43c-14.56,-7.87 -30.08,-19.51 -30.08,-16.54l0,142.12c0,5.94 -5.48,10.93 -12,10.93l-4,0c-6.52,0 -12,-4.99 -12,-10.93l0,-142.12c0,-5.94 5.48,-10.93 12,-10.93l10.27,0l7.79,0.12c6.29,0.05 9.28,4.25 14.41,9.46l7.96,8.46z" fill="#ffffff" fill-opacity="null" id="svg_17" stroke="null" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-opacity="null" stroke-width="null"/>
+   <rect fill="#ffffff" height="28" id="svg_18" rx="12" ry="12" stroke="null" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-opacity="null" stroke-width="null" transform="matrix(6.12323e-17, 0.804081, -1, 4.92357e-17, 108.447, 86.755)" width="180" x="-61.67" y="-79.42"/>
+   <rect fill="#ffffff" height="49.27" id="svg_19" stroke="null" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-opacity="null" stroke-width="null" width="14.59" x="52.48" y="84.82"/>
+   <rect fill="#ffffff" height="109.4" id="svg_20" stroke="null" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-opacity="null" stroke-width="null" transform="rotate(90, 107.499, 91.9869)" width="14.19" x="100.4" y="37.29"/>
+   <rect fill="#ffffff" height="109.4" id="svg_21" stroke="null" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-opacity="null" stroke-width="null" transform="translate(160.07, 110.215) scale(0.996407, 1) translate(-160.07, -110.215) matrix(6.12323e-17, 1, -1, 6.12323e-17, 233.726, 19.8305)" width="14.59" x="99.65" y="72.08"/>
+   <rect fill="#ffffff" height="18.64" id="svg_22" rx="9" ry="9" stroke="null" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-opacity="null" stroke-width="null" transform="matrix(1, 0, 0, 1, 0, 0)" width="33.55" x="29.95" y="28.74"/>
+   <rect fill="#ffffff" height="18.64" id="svg_23" rx="9" ry="9" stroke="null" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-opacity="null" stroke-width="null" transform="matrix(1, 0, 0, 1, 0, 0)" width="33.55" x="16.58" y="20.23"/>
+  </g>
+  <text fill="#ffffff" font-family="Helvetica" font-size="128.62" id="svg_41" stroke="null" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-opacity="null" stroke-width="0" text-anchor="middle" x="457.2" xml:space="preserve" y="155.2">ventory</text>
+ </g>
+
+</svg>

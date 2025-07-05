@@ -744,6 +744,159 @@ nav a::after {
   transform: translateY(-2px);
 }
 
+/* Project Media Modal Styles */
+.project-media-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1001;
+  overflow-y: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-media-modal.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.project-media-content {
+  background-color: var(--secondary-dark);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--tertiary-dark);
+}
+
+.modal-header h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.modal-body {
+  padding: 0;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.media-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.media-carousel {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.media-slides {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.media-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-slide.active {
+  opacity: 1;
+}
+
+.media-slide img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.media-slide video {
+  max-width: 100%;
+  max-height: 70vh;
+}
+
+.carousel-control {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  z-index: 2;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+  left: 20px;
+}
+
+.carousel-control.next {
+  right: 20px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  gap: 0.5rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--tertiary-dark);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.indicator.active {
+  background-color: var(--primary-blue);
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
   .project {
