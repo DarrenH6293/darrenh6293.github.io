@@ -174,7 +174,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const projectId = this.getAttribute("data-project");
             const media = projectMedia[projectId];
 
-            if (!media) return;
+            if (!media) {
+                console.error("No media found for project ID:", projectId);
+                return;
+            }
 
             modalTitle.textContent =
                 media.title + (media.type === "screenshots" ? " Screenshots" : " Demo");
@@ -189,11 +192,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (media.type === "video") {
                     slide.innerHTML = `
-                        <video controls>
-                            <source src="${item}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <div class="video-container">
+                            <video controls preload="auto" playsinline>
+                                <source src="${item}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-loading">Loading video...</div>
+                        </div>
                     `;
+
+                    const video = slide.querySelector('video');
+
+                    video.addEventListener('loadeddata', function () {
+                        console.log("Video loaded successfully");
+                        slide.querySelector('.video-loading').style.display = 'none';
+                    });
+
+                    video.addEventListener('error', function (e) {
+                        console.error("Error loading video:", e);
+                        slide.innerHTML = `
+                            <div class="video-error">
+                                <p>Error loading video. Please try again or <a href="${item}" download>download</a> to view.</p>
+                            </div>
+                        `;
+                    });
                 } else {
                     slide.innerHTML = `<img src="${item}" alt="${media.title} screenshot ${index + 1}">`;
                 }
@@ -218,9 +240,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
             currentSlide = 0;
 
-
             mediaModal.classList.add("show");
             document.body.style.overflow = "hidden";
+
+            setTimeout(() => {
+                const activeSlide = mediaSlides.querySelector('.media-slide.active');
+                if (activeSlide) {
+                    const video = activeSlide.querySelector('video');
+                    if (video) {
+                        video.style.display = 'none';
+                        setTimeout(() => {
+                            video.style.display = 'block';
+                            video.play().catch(e => console.log("Auto-play prevented:", e));
+                        }, 50);
+                    }
+                }
+            }, 300);
         });
     });
 
@@ -309,14 +344,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Research Paper Modal functionality
+    // Paper Modal
     const paperModal = document.getElementById("paperModal");
     const closePaperModal = document.getElementById("closePaperModal");
     const paperPreview = document.getElementById("paperPreview");
     const downloadPaper = document.getElementById("downloadPaper");
     const paperModalTitle = document.getElementById("paperModalTitle");
 
-    // Add click event to research paper buttons
     document.querySelectorAll(".paper-button").forEach((button) => {
         button.addEventListener("click", function (e) {
             e.preventDefault();
@@ -326,31 +360,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (!paperPath) return;
 
-            // Set modal title
+
             paperModalTitle.textContent = paperTitle;
 
-            // Update paper preview
+
             paperPreview.innerHTML = `
                 <iframe src="${paperPath}"></iframe>
             `;
 
-            // Update download link
+
             downloadPaper.href = paperPath;
             downloadPaper.setAttribute("download", paperPath.split('/').pop());
 
-            // Show modal
+
             paperModal.classList.add("show");
             document.body.style.overflow = "hidden";
         });
     });
 
-    // Close modal
+
     closePaperModal.addEventListener("click", function () {
         paperModal.classList.remove("show");
         document.body.style.overflow = "auto";
     });
 
-    // Close modal when clicking outside
     paperModal.addEventListener("click", function (event) {
         if (event.target === paperModal) {
             paperModal.classList.remove("show");
@@ -358,7 +391,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Keyboard navigation (Escape to close)
+
     document.addEventListener("keydown", function (event) {
         if (!paperModal.classList.contains("show")) return;
 
