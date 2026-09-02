@@ -453,6 +453,68 @@ nav a::after {
   transform: scale(1.05);
 }
 
+/* Experience Section Styles */
+.experience {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-dark),
+    var(--primary-dark)
+  );
+  padding: 5rem 2rem;
+}
+
+.experience-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-item {
+  background: var(--secondary-dark);
+  border: 1px solid rgba(58, 134, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--tertiary-dark);
+  padding-bottom: 1rem;
+}
+
+.experience-header h3 {
+  font-size: 1.8rem;
+  color: var(--accent-blue);
+  margin-bottom: 0.35rem;
+}
+
+.company {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.experience-date {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.experience-bullets {
+  margin-left: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.experience-bullets li {
+  margin-bottom: 0.75rem;
+}
+
 /* Projects Section Styles */
 .projects {
   background-color: var(--primary-dark);
